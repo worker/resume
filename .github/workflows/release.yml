@@ -28,10 +28,15 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
 
+      - name: Move resume.pdf to a different folder
+        run: |
+          mkdir ../gh-pages
+          mv resume.pdf ../gh-pages
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: ./
+          folder: ../gh-pages
 
       # - name: Upload a Build Artifact
       #   uses: actions/upload-artifact@v4.4.2
