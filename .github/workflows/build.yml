@@ -1,0 +1,28 @@
+name: Build Resume on Push
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Build the LaTex resume using a GitHub Action
+      - name: LaTeX Action
+        uses: fudan-mse/latex-action@v0.0.1
+        with:
+          # The root LaTeX file to be compiled
+          root_file: resume.tex
+          # Install extra packages by tlmgr
+          # extra_packages: # optional
+          # Install extra packages by apk
+          # extra_system_packages: # optional
+
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.4.2
+        with:
+          name: resume.pdf
+          path: resume.pdf
