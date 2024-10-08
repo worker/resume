@@ -31,11 +31,11 @@ jobs:
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.4.2
         with:
-          name: resume.pdf
-          path: resume.pdf
+          name: github-pages
+          path: ./
 
       - name: Upload resume to GitHub Pages
         uses: actions/deploy-pages@v4.0.5
         with:
           # Name of the artifact to deploy
-          artifact_name: resume.pdf
+          artifact_name: github-pages
