@@ -1,0 +1,25 @@
+name: Release Resume
+
+on:
+  release:
+    types: [ published ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Build the LaTex resume using a GitHub Action
+      - name: LaTeX Action
+        uses: fudan-mse/latex-action@v0.0.1
+        with:
+          root_file: resume.tex
+
+      - name: Upload resume to the GitHub release that triggered the workflow
+        run: |
+          gh release upload ${{ github.event.release.tag_name }} resume.pdf
+          gh release upload ${{ github.event.release.tag_name }} resume.tex
+        env:
+          GH_TOKEN: ${{ github.token }}
+          
