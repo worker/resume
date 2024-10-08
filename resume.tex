@@ -1,0 +1,225 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{fontawesome}
+\usepackage{hyperref}
+
+
+\input{glyphtounicode}
+
+% -------------------- FONT --------------------
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-1in} % Default was -.5in
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Subsection formatting
+\titleformat{\subsection}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{\hspace{-.15in}}{0em}{}[\color{black}\vspace{-8pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% -------------------- CUSTOM COMMANDS --------------------
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\setlength{\footskip}{4.08003pt}
+
+% -------------------- START OF DOCUMENT --------------------
+\begin{document}
+
+% -------------------- HEADING--------------------
+\begin{flushright}
+  \vspace{-4pt}
+\end{flushright}
+
+\vspace{-7pt}
+
+\begin{center}
+    \textbf{\Huge \scshape John Doe} \\ \vspace{8pt}
+    \small 
+    \faGithub
+    \href{https://github.com/johnDoe}{\underline{github.com/johnDoe}} $  $
+    %\faCode $  $
+    %\href{https://www.johndoe.com}
+    %{\underline{johndoe.com}} $  $
+    \faEnvelope$  $
+    \href{mailto:johndoe@gmail.com}
+    {\underline{johndoe@gmail.com}}
+    \faPhone$  $
+    \underline{407-321-9876}
+    \faLinkedin$  $
+    \href{https://linkedin.com/in/johndoe}{\underline{linkedin.com/in/johndoe}} $  $
+\end{center}
+
+% -------------------- EDUCATION --------------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+        {University of Central Florida}{June 2025}
+        {Bachelor of Science in Computer Science}{Current GPA: 4.0/4.0}
+  
+    \resumeSubheading
+      {University of Central Florida}{June 2025}
+      {Bachelor of Science in Computer Science}{Current GPA: 4.0/4.0}
+      
+    \resumeSubheading
+      {High School \footnotesize{(Dual Enrollment)}}{June 2022}
+      {}{GPA: 4.0/4.0}
+
+  \resumeSubHeadingListEnd
+
+% -------------------- SKILLS --------------------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    
+     \textbf{Programming Languages}{: *FROM PROFICIENT TO LESS* C, Java, Python, JavaScript/TypeScript, HTML/CSS} \\
+     
+     \textbf{Software Tools / Libraries}{: *FROM PROFICIENT TO LESS* React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI, Git/GitHub, pandas, NumPy, Matplotlib Unix Shell, Node.js, Webpack, VS Code, IntelliJ IDEA, Atom} \\
+
+     \textbf{Languages}{: English, Spanish} \\
+     
+    }}
+ \end{itemize}
+
+% -------------------- EXPERIENCE --------------------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+        \resumeProjectHeading
+        {\textbf{Big Company} $|$ \footnotesize\emph{Software Engineer Intern}}{May 2024 -- August 2024}
+        \resumeItemListStart
+          \resumeItem{Bullet point 1}
+          \resumeItem{Bullet point 2}
+          \resumeItem{Bullet point 3}
+          \resumeItem{\textbf{\textit{TECH STACK: }}}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{University of Central Florida} $|$ \footnotesize\emph{Undergraduate Teaching Assistant}}{January 2023 -- May 2024}
+        \resumeItemListStart
+          \resumeItem{Bullet point 1}
+          \resumeItem{Bullet point 2}
+          \resumeItem{Bullet point 3}
+        \resumeItemListEnd
+ 
+    \resumeSubHeadingListEnd 
+
+
+% -------------------- PROJECTS --------------------
+\section{Projects}
+    \resumeSubHeadingListStart
+    
+        \resumeProjectHeading
+        {\textbf{\href{https://github.com/johnDoe}{\underline{Project Name - Get Creative \faExternalLink}}} $|$ \footnotesize\emph{TECH STACK}}{}
+        \resumeItemListStart
+            \resumeItem{Bullet point 1}
+            \resumeItem{Bullet point 2}
+            \resumeItem{Bullet point 3}
+
+        \resumeItemListEnd
+          
+        \resumeProjectHeading
+        {\textbf{\href{https://github.com/johnDoe}{\underline{Project Name - Get Creative \faExternalLink }}} $|$ \footnotesize\emph{TECH STACK}}{}
+        \resumeItemListStart
+            \resumeItem{Bullet point 1}
+            \resumeItem{Bullet point 2}
+            \resumeItem{Bullet point 3}
+        \resumeItemListEnd
+          
+    \resumeSubHeadingListEnd
+
+% -------------------- EXPERIENCE --------------------
+\section{Extracurricular Activities}
+  \resumeSubHeadingListStart
+        \resumeProjectHeading
+          {\textbf{Bloomberg Tech Lab at UCF :P} $|$ \footnotesize\emph{Attendee}\vspace{8pt}}{August 2024}
+          {\small{1 of 50 students invited...}}
+    
+        \resumeProjectHeading
+          {\textbf{Society of Hispanic Professional Engineers UCF} $|$ \footnotesize\emph{Member}\vspace{8pt}}{August 2024 - Present}
+          {\small{what do you do at SHPE?}}        
+
+    \resumeSubHeadingListEnd 
+
+\section{Awards}
+  \resumeSubHeadingListStart
+        
+        \resumeProjectHeading
+          {\textbf{3\textsuperscript{rd} Place Knight Hacks 2024
+          \footnotesize{(University Hackathon)}}\vspace{8pt} $|$ \footnotesize\emph{Competitor}}{August 2024}
+          {\small{Won 10,000 dollars because I am great (link project and talk about tech stack)}}
+        \resumeProjectHeading
+          {\textbf{President Honor Roll}\vspace{8pt} $|$ \footnotesize\emph{Spring 2024}}{}
+          {\small{Award of 4.00 GPA in Spring 2024 semester}}
+    \resumeSubHeadingListEnd 
+
+
+
+\end{document}
