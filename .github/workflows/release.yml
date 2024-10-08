@@ -8,7 +8,7 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -25,4 +25,15 @@ jobs:
           gh release upload ${{ github.event.release.tag_name }} resume.tex
         env:
           GH_TOKEN: ${{ github.token }}
-          
+
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.4.2
+        with:
+          name: resume.pdf
+          path: resume.pdf
+
+      - name: Upload resume to GitHub Pages
+        uses: actions/deploy-pages@v4.0.5
+        with:
+          # Name of the artifact to deploy
+          artifact_name: resume.pdf
